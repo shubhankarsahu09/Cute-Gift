@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A cute Gift 😊</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=3">
+</head>
+
+<body>
+    <!-- Screen 1: Do you love me? -->
+    <div id="questionOverlay" class="screen">
+        <div class="question-box">
+            <h1 class="question-title">Do you love me?</h1>
+            <div class="buttons-container">
+                <button id="btnYes" class="btn btn-yes">Yes ❤️</button>
+                <button id="btnNo" class="btn btn-no">No 💔</button>
+            </div>
+        </div>
+        <p id="funnyMsg" class="funny-msg"></p>
+    </div>
+
+    <!-- Particles -->
+    <div id="particles-container"></div>
+
+    <!-- Screen 1.5: Lock Screen -->
+    <div id="screenLock" class="screen hidden">
+        <div class="lock-container">
+            <div class="lock-left">
+                <img src="assets/chick_flowers.png" alt="Chick">
+            </div>
+            <div class="lock-right">
+                <h2 class="lock-title">Enter a passcode</h2>
+                <div class="passcode-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="keypad">
+                    <button class="key">1</button>
+                    <button class="key">2</button>
+                    <button class="key">3</button>
+                    <button class="key">4</button>
+                    <button class="key">5</button>
+                    <button class="key">6</button>
+                    <button class="key">7</button>
+                    <button class="key">8</button>
+                    <button class="key">9</button>
+                    <button class="key">*</button>
+                    <button class="key">0</button>
+                    <button class="key">#</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 1.6: Wrong Passcode -->
+    <div id="screenWrong" class="screen hidden">
+        <h1 class="error-title">WRONG PASSCODE!</h1>
+        <img src="assets/chick_sad.png" alt="Sad Chick" class="chick-img">
+        <button id="btnTryAgain" class="btn btn-yes" style="margin-top: 20px;">TRY AGAIN</button>
+    </div>
+
+    <!-- Screen 1.7: Success -->
+    <div id="screenSuccess" class="screen hidden">
+        <h1 class="success-title">SURPRISE AWAITING &lt;3</h1>
+        <img src="assets/chick_happy.png" alt="Happy Chick" class="chick-img">
+        <button id="btnSurprise" class="btn btn-yes" style="margin-top: 20px;">SURPRISE</button>
+    </div>
+
+    <!-- Screen 2: Main Menu -->
+    <div id="mainMenu" class="screen hidden">
+        <h1 class="menu-title">click on items to open</h1>
+        <div class="items-container">
+            <div class="clickable-item" id="itemJar">
+                <img src="assets/jar_of_hearts.png" alt="Jar of Hearts">
+                <p>Reasons</p>
+            </div>
+            <div class="clickable-item" id="itemCert">
+                <img src="assets/certificate.png" alt="Certificate">
+                <p>Award</p>
+            </div>
+            <div class="clickable-item" id="itemLetter">
+                <img src="assets/letter.png" alt="Letter">
+                <p>Letter</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 3: Jar of Hearts -->
+    <div id="screenJar" class="screen hidden detail-screen">
+        <button class="btn-back">← Back</button>
+        <div class="content-box">
+            <img src="assets/jar_of_hearts.png" alt="Jar" class="large-img">
+            <h1 class="title">Everything I LOVE ABOUT You</h1>
+            <ul class="reasons-list">
+                <li>Your beautiful smile that lights up my day ✨</li>
+                <li>How you always know how to make me laugh 😂</li>
+                <li>Your kind and caring heart ❤️</li>
+                <li>The way you look at me 🥺</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Screen 4: Certificate -->
+    <div id="screenCert" class="screen hidden detail-screen">
+        <button class="btn-back">← Back</button>
+        <div class="certificate-box">
+            <h1 class="cert-title">BEST GIRLFRIEND AWARD</h1>
+            <p class="cert-sub">This award is presented to</p>
+            <h2 class="cert-name">Aparna</h2>
+            <p class="cert-text">For being the most amazing, beautiful, and loving person in the universe.</p>
+            <img src="assets/certificate.png" alt="Seal" class="cert-seal">
+        </div>
+    </div>
+
+    <!-- Screen 5: Letter -->
+    <div id="screenLetter" class="screen hidden detail-screen">
+        <button class="btn-back">← Back</button>
+        <div class="letter-box">
+            <img src="assets/letter.png" alt="Flowers" class="flower-dec">
+            <h1 class="title">Happy August 1st, Aparna!</h1>
+            <div class="divider"></div>
+            <p class="message">
+                I wanted to do something special to surprise you today.
+                Every moment with you is a gift, and I am so grateful to have you in my life.
+                <br><br>
+                You make everything brighter, and I love you more than words can say.
+                Here's to us, and to many more beautiful moments together.
+            </p>
+            <div class="signature">
+                <p>With all my love,</p>
+                <p class="name">Yours</p>
+                <span class="pulse-heart">🤍</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=3"></script>
+</body>
+
+</html>
