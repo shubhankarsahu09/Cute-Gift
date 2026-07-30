@@ -436,3 +436,69 @@ body {
         font-size: 2rem;
     }
 }
+
+
+/* Custom Audio Player */
+.custom-audio-player {
+    display: inline-flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    box-shadow: var(--shadow-soft);
+    gap: 8px;
+    vertical-align: middle;
+}
+
+.voice-play-btn {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease, background-color 0.2s;
+}
+
+.voice-play-btn:hover {
+    background-color: var(--heart-color);
+    transform: scale(1.1);
+}
+
+.time-display {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-family: monospace;
+}
+
+.progress-bar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 5px;
+    background: #ffe4e1;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--heart-color);
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.progress-bar::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
