@@ -106,13 +106,12 @@
                 <li>Your kind and caring heart ❤️</li>
                 <li>The way you look at me ✨</li>
                 <li>Your voice 🎶 
-                    <div class="custom-audio-player">
-                        <button id="playVoiceBtn" class="voice-play-btn">▶️</button>
-                        <span id="currentTime" class="time-display">0:00</span>
-                        <input type="range" id="audioProgress" class="progress-bar" value="0" max="100">
-                        <span id="durationTime" class="time-display">0:00</span>
-                        <audio id="voiceNoteAudio" style="display: none;" src="assets/facebook_voice_message_30_Jul_2026_00-18-45.mp4"></audio>
-                    </div>
+                    <span id="voice-note-container">
+                        <button id="playVoiceBtn" class="voice-btn">▶️ Play Voice Note</button>
+                        <audio id="voiceNoteAudio" style="display: none;">
+                            <source src="assets/facebook_voice_message_30_Jul_2026_00-18-45.mp4" type="audio/mp4">
+                        </audio>
+                    </span>
                 </li>
                 <li>And the last one thing that I like about you is You 💝😋</li>
             </ul>

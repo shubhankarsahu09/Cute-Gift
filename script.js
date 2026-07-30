@@ -172,51 +172,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Voice note logic
     const playVoiceBtn = document.getElementById('playVoiceBtn');
     const voiceNoteAudio = document.getElementById('voiceNoteAudio');
-    const audioProgress = document.getElementById('audioProgress');
-    const currentTimeDisplay = document.getElementById('currentTime');
-    const durationTimeDisplay = document.getElementById('durationTime');
 
-    if(playVoiceBtn && voiceNoteAudio && audioProgress) {
-        // Format time in minutes:seconds
-        function formatTime(seconds) {
-            const mins = Math.floor(seconds / 60);
-            const secs = Math.floor(seconds % 60);
-            return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
-        }
-
-        // Setup duration once metadata is loaded
-        voiceNoteAudio.addEventListener('loadedmetadata', () => {
-            audioProgress.max = voiceNoteAudio.duration;
-            durationTimeDisplay.textContent = formatTime(voiceNoteAudio.duration);
-        });
-
+    if(playVoiceBtn && voiceNoteAudio) {
         playVoiceBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             if (voiceNoteAudio.paused) {
                 voiceNoteAudio.play();
-                playVoiceBtn.innerHTML = '⏸️';
+                playVoiceBtn.innerHTML = '⏸️ Pause Voice Note';
             } else {
                 voiceNoteAudio.pause();
-                playVoiceBtn.innerHTML = '▶️';
+                playVoiceBtn.innerHTML = '▶️ Play Voice Note';
             }
         });
         
-        // Update progress bar as audio plays
-        voiceNoteAudio.addEventListener('timeupdate', () => {
-            audioProgress.value = voiceNoteAudio.currentTime;
-            currentTimeDisplay.textContent = formatTime(voiceNoteAudio.currentTime);
-        });
-
-        // Seek audio when progress bar is changed
-        audioProgress.addEventListener('input', () => {
-            voiceNoteAudio.currentTime = audioProgress.value;
-            currentTimeDisplay.textContent = formatTime(voiceNoteAudio.currentTime);
-        });
-        
         voiceNoteAudio.addEventListener('ended', () => {
-            playVoiceBtn.innerHTML = '▶️';
-            audioProgress.value = 0;
-            currentTimeDisplay.textContent = '0:00';
+            playVoiceBtn.innerHTML = '▶️ Play Voice Note';
         });
     }
 });
