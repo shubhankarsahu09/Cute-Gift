@@ -421,19 +421,118 @@ body {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 600px) {
-    .items-container {
-        gap: 20px;
-    }
+/* Tablet & Small Laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
     .clickable-item {
-        width: 140px;
-        padding: 15px;
+        width: 150px;
     }
+    .letter-box {
+        padding: 50px 40px;
+    }
+    .certificate-box {
+        padding: 50px 30px;
+    }
+}
+
+/* Tablets (max-width: 768px) */
+@media (max-width: 768px) {
     .cert-name {
-        font-size: 3rem;
+        font-size: 3.2rem;
+        padding: 0 20px;
     }
     .cert-title {
+        font-size: 2.2rem;
+    }
+    .menu-title {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+    }
+    .large-img {
+        width: 120px;
+        height: 120px;
+    }
+    .content-box {
+        padding: 40px 30px;
+    }
+}
+
+/* Mobile Devices (max-width: 600px) */
+@media (max-width: 600px) {
+    .items-container {
+        gap: 15px;
+    }
+    .clickable-item {
+        width: 130px;
+        padding: 15px;
+    }
+    .clickable-item img {
+        width: 80px;
+        height: 80px;
+    }
+    .cert-name {
+        font-size: 2.5rem;
+        padding: 0 10px;
+    }
+    .cert-title {
+        font-size: 1.8rem;
+    }
+    .cert-seal {
+        width: 80px;
+        height: 80px;
+        bottom: -20px;
+        right: -20px;
+    }
+    .letter-box {
+        padding: 40px 20px;
+    }
+    .flower-dec {
+        width: 100px;
+        height: 100px;
+        top: -30px;
+        right: -10px;
+    }
+    .question-box {
+        padding: 30px 20px;
+    }
+    .question-title {
+        font-size: 1.6rem;
+    }
+    .menu-title {
+        font-size: 1.8rem;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .chick-img {
+        width: 200px;
+        height: 200px;
+    }
+    .error-title, .success-title {
         font-size: 2rem;
+    }
+    .content-box {
+        padding: 30px 20px;
+    }
+    .reasons-list li {
+        font-size: 1rem;
+    }
+}
+
+/* Extra Small Mobile (max-width: 400px) */
+@media (max-width: 400px) {
+    .clickable-item {
+        width: 100%;
+        max-width: 200px;
+    }
+    .cert-name {
+        font-size: 2rem;
+    }
+    .cert-seal {
+        width: 60px;
+        height: 60px;
+        bottom: -15px;
+        right: -15px;
     }
 }
 
