@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- PASSCODE LOGIC ---
-    const TARGET_PASSCODE = "2112";
+    const TARGET_PASSCODE = "2412";
     let currentPasscode = "";
     const dots = document.querySelectorAll('.dot');
 
